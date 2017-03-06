@@ -18,10 +18,10 @@ class SurveysController < ApplicationController
   end
 
   def create
-    @survey = Survey.new(params[:survey])
+    @survey = Survey.new(survey_params)
     if @survey.save
       flash[:notice] = "Successfully create survey"
-      redirect_to @survey
+      redirect_to survey_path(@survey)
     else
       render :new
     end
@@ -33,7 +33,7 @@ class SurveysController < ApplicationController
 
   def update
     @survey = Survey.find(params[:id])
-    if @srvey.update_attributes(params[:survey])
+    if @survey.update_attributes(params[:survey])
       flash[:notice] = "Update survey success"
       redirect_to @survey
     else
@@ -57,10 +57,10 @@ private
 
   # other content from scaffold
 
-  # def survey_params
-  #   params.require(:survey).permit(:name,
-  #     :questions_atrributes => [:id, :content,
-  #       :answers_attributes => [:id, :content, :user_id]
-  #     ])
-  # end
+  def survey_params
+    params.require(:survey).permit(:name,
+      :questions_attributes => [:id, :content,
+        :answers_attributes => [:id, :response, :user_id]
+      ])
+  end
 end
