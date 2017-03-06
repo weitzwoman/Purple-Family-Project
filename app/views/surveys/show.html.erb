@@ -1,0 +1,20 @@
+<p>Name: <%= @survey.name %></p>
+
+<ol>
+<% for @survey.questions do |question| %>
+  <li>
+    <%= question.content %>
+    <ul>
+    <% for question.answers do |answer| %>
+      <li><%= answer.response %></li>
+    <% end %>
+    </ul>
+  </li>
+<% end %>
+</ol>
+
+<p>
+  <%= link_to "Edit", edit_survey_path(@survey) %> |
+  <%= link_to "Destroy", @survey, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", surveys_path %>
+</p>
