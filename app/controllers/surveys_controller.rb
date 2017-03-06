@@ -1,5 +1,5 @@
 class SurveysController < ApplicationController
-  before_action :set_survey, only: [:show, :edit, :update, :destroy, :answers]
+  # before_action :set_survey, only: [:show, :edit, :update, :destroy, :answers]
 
   def index
     @surveys = Survey.all
@@ -19,7 +19,7 @@ class SurveysController < ApplicationController
 
   def create
     @survey = Survey.new(survey_params)
-    binding.pry
+
     if @survey.save
       flash[:notice] = "Successfully create survey"
       redirect_to survey_path(@survey)
@@ -58,8 +58,8 @@ private
 
   def survey_params
     params.require(:survey).permit(:name,
-      questions_attributes: [:id, :content,
-        answers_attributes: [:id, :response, :user_id]
+      questions_attributes: [:id, :content
+        # answers_attributes: [:id, :response, :user_id]
       ])
   end
 end

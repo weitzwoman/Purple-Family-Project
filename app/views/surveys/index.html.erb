@@ -3,9 +3,9 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Survey Name:</th>
   </tr>
-  <% for survey in @surveys %>
+  <% @surveys.each do |survey| %>
     <tr>
       <td><%= survey.name %></td>
       <td><%= link_to "Show", survey %></td>

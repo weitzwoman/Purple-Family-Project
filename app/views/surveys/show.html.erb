@@ -1,15 +1,8 @@
 <p>Name: <%= @survey.name %></p>
 
 <ol>
-<% for @survey.questions do |question| %>
-  <li>
-    <%= question.content %>
-    <ul>
-    <% for question.answers do |answer| %>
-      <li><%= answer.response %></li>
-    <% end %>
-    </ul>
-  </li>
+<% @survey.questions.each do |question| %>
+  <li><%= question.content %></li>
 <% end %>
 </ol>
 
