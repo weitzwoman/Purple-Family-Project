@@ -19,6 +19,7 @@ class SurveysController < ApplicationController
 
   def create
     @survey = Survey.new(survey_params)
+    binding.pry
     if @survey.save
       flash[:notice] = "Successfully create survey"
       redirect_to survey_path(@survey)
@@ -55,12 +56,10 @@ class SurveysController < ApplicationController
 
 private
 
-  # other content from scaffold
-
   def survey_params
     params.require(:survey).permit(:name,
-      :questions_attributes => [:id, :content,
-        :answers_attributes => [:id, :response, :user_id]
+      questions_attributes: [:id, :content,
+        answers_attributes: [:id, :response, :user_id]
       ])
   end
 end

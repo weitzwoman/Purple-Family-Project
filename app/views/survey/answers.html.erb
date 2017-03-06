@@ -1,8 +1,8 @@
-<h1>Survey Answers</h1>
+<h1><%= @survey.name %> Answers</h1>
 
 <%= form_for(@survey) do |f| %>
   <% @users.each do |user| -%>
-  <h3><%= user.email %></h3>
+  <h3><%= user.name %></h3>
   <table>
     <thead>
       <tr>
@@ -17,7 +17,7 @@
         <td>
         <%= f.fields_for :questions, question do |q| -%>
           <%= q.fields_for :answers, question.answers.find_or_initialize_by(user: user) do |a| -%>
-            <%= a.text_area :response %>
+            <%= a.text_area :content %>
             <%= a.hidden_field :user_id, user.id %>
           <% end -%>
         <% end -%>

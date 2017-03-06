@@ -1,11 +1,10 @@
-<%= form_for @survey do |f| %>
-
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
+<%= simple_form_for @survey do |f| %>
+  <%= f.label "Survey Name" %>
+  <%= f.text_field :name %>
+  <br>
   <%= f.fields_for :questions do |builder| %>
     <%= render "question_fields", :f => builder %>
   <% end %>
-  <p> <%= f.submit "Submit" %></p>
+  <br>
+  <%= f.submit "Create Survey", :class => 'btn btn-default' %>
 <% end %>
