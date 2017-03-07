@@ -1,15 +1,15 @@
-<%= simple_form_for @questions do |f| %>
-  <%= f.fields_for :questions do |question_builder| %>
-    <%= question_builder.label :content, "Question" %>
+  <%= simple_form_for @question do |f| %>
+    <%= f.label "Question" %>
     <br>
-    <%= question_builder.text_area :content, :rows => 3 %>
+    <%= f.input :content %>
     <br>
-    <%= question_builder.fields_for :answers do |answer_builder| %>
-      <%= answer_builder.label :response, "Answer" %>
-      <%= answer_builder.text_field :response %>
-      <br>
-    <% end %>
+      <div id="answers_form">
+        <%= f.simple_fields_for :answers do |answer| %>
+          <%= render 'answer_fields', f: answer %>
+        <% end %>
+        <div class="links">
+          <%= link_to_add_association 'add answer', f, :answers %>
+        </div>
+      </div>
+    <%= f.submit "Create Question", :class => 'btn btn-default' %>
   <% end %>
-  <br>
-  <%= f.submit "Create Questions", :class => 'btn btn-default' %>
-<% end %>

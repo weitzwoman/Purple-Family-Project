@@ -38,6 +38,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rest-client'
 gem 'devise'
 gem 'simple_form'
+gem 'cocoon'
 
 
 group :development, :test do
