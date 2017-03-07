@@ -11,15 +11,18 @@ class SurveysController < ApplicationController
 
   def new
     @survey = Survey.new
-    5.times do
-      question = @survey.questions.build
-      3.times { question.answers.build }
+    @survey.questions.build
+    @survey.questions.each do |question|
+      question.answers.build
     end
+    # 5.times do
+    #   question = @survey.questions.build
+    #   3.times { question.answers.build }
+    # end
   end
 
   def create
     @survey = Survey.new(survey_params)
-
     if @survey.save
       flash[:notice] = "Successfully create survey"
       redirect_to survey_path(@survey)
@@ -58,8 +61,8 @@ private
 
   def survey_params
     params.require(:survey).permit(:name,
-      questions_attributes: [:id, :content
-        # answers_attributes: [:id, :response, :user_id]
+      questions_attributes: [:id, :content, :survey_id
+        # answers_attributes: [:id, :response, :question_id]
       ])
   end
 end

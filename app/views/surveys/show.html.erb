@@ -2,7 +2,13 @@
 
 <ol>
 <% @survey.questions.each do |question| %>
-  <li><%= question.content %></li>
+  <li><%= question.content %>
+    <ol class="answers">
+      <% question.answers.each do |answer| %>
+        <li><%= answer.response %></li>
+      <% end %>
+    </ol>
+  </li>
 <% end %>
 </ol>
 

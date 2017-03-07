@@ -2,8 +2,16 @@
   <%= f.label "Survey Name" %>
   <%= f.text_field :name %>
   <br>
-  <%= f.fields_for :questions do |builder| %>
-    <%= render "question_fields", :f => builder %>
+  <%= f.fields_for :questions do |question_builder| %>
+    <%= question_builder.label :content, "Question" %>
+    <br>
+    <%= question_builder.text_area :content, :rows => 3 %>
+    <br>
+    <%= question_builder.fields_for :answers do |answer_builder| %>
+      <%= answer_builder.label :response, "Answer" %>
+      <%= answer_builder.text_field :response %>
+      <br>
+    <% end %>
   <% end %>
   <br>
   <%= f.submit "Create Survey", :class => 'btn btn-default' %>
