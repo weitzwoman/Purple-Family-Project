@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
 
-  resources :surveys do
+  resources :questions do
     get 'answers', on: :member
   end
-  
+
 end

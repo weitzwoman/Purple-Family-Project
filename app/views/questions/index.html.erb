@@ -1,0 +1,15 @@
+<h1>Admin View</h1>
+<h2>Question List</h2>
+
+<table>
+  <% @questions.each do |question| %>
+    <tr>
+      <td><%= question.content %></td>
+      <td><%= link_to "Show", question %></td>
+      <td><%= link_to "Edit", edit_question_path(question) %></td>
+      <td><%= link_to "Destroy", question, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Question", new_question_path %></p>

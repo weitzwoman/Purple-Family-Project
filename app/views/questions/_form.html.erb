@@ -1,7 +1,4 @@
-<%= simple_form_for @survey do |f| %>
-  <%= f.label "Survey Name" %>
-  <%= f.text_field :name %>
-  <br>
+<%= simple_form_for @questions do |f| %>
   <%= f.fields_for :questions do |question_builder| %>
     <%= question_builder.label :content, "Question" %>
     <br>
@@ -14,5 +11,5 @@
     <% end %>
   <% end %>
   <br>
-  <%= f.submit "Create Survey", :class => 'btn btn-default' %>
+  <%= f.submit "Create Questions", :class => 'btn btn-default' %>
 <% end %>
