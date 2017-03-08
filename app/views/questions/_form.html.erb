@@ -1,11 +1,10 @@
-  <%= simple_form_for @question do |f| %>
-    <%= f.input :content %>
-    <br>
-      <div id="answers_form">
-        <%= f.simple_fields_for :answers do |answer| %>
-          <%= render 'answer_fields', f: answer %>
-        <% end %>
-
-      </div>
-    <%= f.submit "Submit Question", :class => 'btn btn-default' %>
-  <% end %>
+<%= simple_form_for @question do |f| %>
+  <%= f.input :content %>
+  <br>
+    <div id="answers_form">
+      <%= f.simple_fields_for :answers do |answer| %>
+        <%= render 'answer_fields', f: answer %>
+      <% end %>
+    </div>
+  <%= f.submit "Submit Question", :class => 'btn btn-default' %>
+<% end %>

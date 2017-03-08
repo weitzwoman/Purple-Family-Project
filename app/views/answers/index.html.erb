@@ -1,0 +1,10 @@
+
+
+<h2>Show User Answers</h2>
+  <% @answers.each do |a| %>
+    <h4> <%= a.question.content %> </h4>
+    <h5>You answered: <%= a.show_true %> </h5>
+  <% end %>
+
+<h2>Show other known User Answers</h2>
+  

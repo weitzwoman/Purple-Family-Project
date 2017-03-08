@@ -1,5 +1,11 @@
 class AnswersController < ApplicationController
 
+  def index
+    @questions = Question.all
+    @answers = Answer.where(:user_id => current_user)
+    @other_answers = Answer.all
+  end
+
   def show
   end
 

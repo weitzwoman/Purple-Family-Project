@@ -1,0 +1,3 @@
+class AllowedUserViewersController < ApplicationController
+
+end

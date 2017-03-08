@@ -8,4 +8,8 @@ Rails.application.routes.draw do
     resources :answers
   end
 
+  resources :users, only: [] do
+    resources :answers 
+  end
+
 end
