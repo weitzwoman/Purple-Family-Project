@@ -1,7 +1,6 @@
 class AnswersController < ApplicationController
 
   def index
-    byebug
     @questions = Question.all
     @answers = Answer.where(:user_id => current_user)
     @other_answers = Answer.all

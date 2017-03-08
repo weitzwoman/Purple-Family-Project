@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   end
 
   resources :allowed_user_viewers, only: [:new, :create]
-
+  get "/form_complete", to: "allowed_user_viewers#form_complete"
 end

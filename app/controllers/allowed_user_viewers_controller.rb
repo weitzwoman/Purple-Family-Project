@@ -13,6 +13,13 @@ class AllowedUserViewersController < ApplicationController
     end
   end
 
+  def form_complete
+    @user = User.find(params[:id])
+    if @user.update(form_complete: true)
+      redirect_to user_answers_path(current_user)
+    end
+  end
+
 private
   def viewer_params
     params.require(:allowed_user_viewer).permit(:user_email, :user_id)
