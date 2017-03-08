@@ -1,4 +1,7 @@
 <div class='nested-fields'>
-    <%= f.input :response %>
-    <%= link_to_remove_association "remove answer", f %>
+  <%= f.input :response1, inline_label: "Most of the time", label: false %>
+  <%= f.input :response2, inline_label: "Some of the time", label: false %>
+  <%= f.input :response3, inline_label: "Maybe....", label: false %>
+  <%= f.input :response4, inline_label: "Rarely", label: false %>
+  <%= link_to_remove_association "remove answer", f %>
 </div>

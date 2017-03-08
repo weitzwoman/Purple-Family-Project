@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :questions do
     get 'answers', on: :member
+    resources :answers
   end
 
 end

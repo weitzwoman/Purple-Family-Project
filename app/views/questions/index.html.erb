@@ -1,15 +1,24 @@
-<h1>Admin View</h1>
-<h2>Question List</h2>
 
-<table>
-  <% @questions.each do |question| %>
-    <tr>
-      <td><%= question.content %></td>
-      <td><%= link_to "Show", question %></td>
-      <td><%= link_to "Edit", edit_question_path(question) %></td>
-      <td><%= link_to "Destroy", question, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
+
+<% if current_user.is_admin %>
+  <h1>Admin View</h1>
+  <table>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.content %></td>
+        <td><%= link_to "Show", question %></td>
+        <td><%= link_to "Edit", edit_question_path(question) %></td>
+        <td><%= link_to "Destroy", question, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <p><%= link_to "New Question", new_question_path %></p>
+<% elsif %>
+  <h2>Take the Survey</h2>
+  <% @questions.each do |q| %>
+    <h4> <%= q.content %> </h4>
+    <%= render "answer_survey_form", question: q, answer: @answer %>
   <% end %>
-</table>
 
-<p><%= link_to "New Question", new_question_path %></p>
+<% end %>
