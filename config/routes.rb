@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [] do
-    resources :answers 
+    resources :answers
   end
+
+  resources :allowed_user_viewers, only: [:new, :create]
 
 end

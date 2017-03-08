@@ -21,5 +21,5 @@
       <h4>Question Answered!</h4>
     </div>
   <% end %>
-  <h3><%= link_to "Submit Survey", user_answers_path(current_user) %> </h3>
+  <h3><%= link_to "Submit Survey", user_answers_path(current_user, html={ form_complete: true })  %> </h3>
 <% end %>

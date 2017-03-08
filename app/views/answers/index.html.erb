@@ -7,4 +7,7 @@
   <% end %>
 
 <h2>Show other known User Answers</h2>
-  
+  <%= simple_form_for @allowed_user_viewer do |f| %>
+    <h4>Enter a Friend or Family member's email to view what you have in common: <%= f.input :user_email, label: false %></h4>
+    <%= f.submit "Submit Email", :class => 'btn btn-default' %>
+  <% end %>
