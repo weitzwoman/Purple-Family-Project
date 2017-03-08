@@ -5,6 +5,7 @@ class AllowedUserViewersController < ApplicationController
 
   def create
     @allowed_user_viewer = AllowedUserViewer.new(viewer_params)
+    @allowed_user_viewer.user_id = current_user.id
     if @allowed_user_viewer.save
       redirect_to user_answers_path(current_user)
     else

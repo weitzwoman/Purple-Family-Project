@@ -8,20 +8,11 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    # @answers = @question.answers
   end
 
   def new
     @question = Question.new
-    # # @answers = @question.answers
     @question.answers.build
-    # @questions.each do |question|
-    #   question.answers.build
-    # end
-    # 1.times do
-    #   question = @questions.build
-    #   2.times { question.answers.build }
-    # end
   end
 
   def create
@@ -57,11 +48,6 @@ class QuestionsController < ApplicationController
     flash[:notice] = "Destroy question success"
     redirect_to questions_path
   end
-
-  # def answers
-  #   @users = User.all
-  #   # @questions = @survey.questions
-  # end
 
 private
   def question_params

@@ -1,0 +1,5 @@
+<h2>Show Matches</h2>
+<% @questions.each do |q| %>
+  <p><%= q.content %></p>
+  <p><%= answer_match(q) %></p>
+<% end %>
