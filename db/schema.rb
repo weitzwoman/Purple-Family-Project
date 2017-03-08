@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307233734) do
+ActiveRecord::Schema.define(version: 20170308162431) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20170307233734) do
     t.boolean "response1",   default: false
     t.boolean "response2",   default: false
     t.boolean "response3",   default: false
-    t.boolean "response4",   default: false
   end
 
   create_table "questions", force: :cascade do |t|

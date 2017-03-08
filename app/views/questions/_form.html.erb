@@ -1,15 +1,11 @@
   <%= simple_form_for @question do |f| %>
-    <%= f.label "Question" %>
-    <br>
     <%= f.input :content %>
     <br>
       <div id="answers_form">
         <%= f.simple_fields_for :answers do |answer| %>
           <%= render 'answer_fields', f: answer %>
         <% end %>
-        <div class="links">
-          <%= link_to_add_association 'add answer', f, :answers %>
-        </div>
+
       </div>
-    <%= f.submit "Create Question", :class => 'btn btn-default' %>
+    <%= f.submit "Submit Question", :class => 'btn btn-default' %>
   <% end %>

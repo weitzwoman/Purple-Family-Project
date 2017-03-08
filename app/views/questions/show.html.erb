@@ -1,15 +1,8 @@
 
 <h3>Question: <%= @question.content %></h3>
 
-
-<ul>
-<% @question.answers.each do |answer| %>
-  <li>Answer: <%= answer.response %></li>
-<% end %>
-</ul>
-
 <p>
-  <%= link_to "Edit", edit_question_path(@question) %> |
-  <%= link_to "Destroy", @question, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Edit Question", edit_question_path(@question) %> |
+  <%= link_to "Delete Question", @question, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", questions_path %>
 </p>
