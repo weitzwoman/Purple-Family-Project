@@ -1,5 +1,5 @@
 <div class="survey-answer-form">
-  <%= simple_form_for [question, answer] do |f| %>
+  <%= simple_form_for [question, answer], remote: true do |f| %>
     <%= f.input :response1, inline_label: "Most of the time", label: false %>
     <%= f.input :response2, inline_label: "Some of the time", label: false %>
     <%= f.input :response3, inline_label: "Not often", label: false %>

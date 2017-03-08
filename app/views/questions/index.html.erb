@@ -18,7 +18,12 @@
   <h2>Take the Survey</h2>
   <% @questions.each do |q| %>
     <h4> <%= q.content %> </h4>
-    <%= render "answer_survey_form", question: q, answer: @answer %>
+    <div id="question-options-<%= q.id %>">
+      <%= render "answer_survey_form", question: q, answer: @answer %>
+    </div>
+    <div class="form-success-submit">
+      <h4>Question Answered!</h4>
+    </div>
   <% end %>
 
 <% end %>
