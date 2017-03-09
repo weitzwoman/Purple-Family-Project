@@ -24,21 +24,16 @@
   border: transparent;
 }
 
-.navbar-header {
-  .navbar-brand {
-    font-family: "Crete Round", serif;
-    font-size: 20px;
-    a {
-      color: $lightpurple;
-    }
-  }
+.navbar .container-fluid .navbar-header .navbar-brand {
+  font-family: "Crete Round", serif;
+  font-size: 20px;
+  color: $lightpurple;
 }
 
-.navbar-right {
-  font-size: 20px;
-  a, li {
-    color: white;
-  }
+.navbar .container-fluid .nav li a {
+  font-size: 18px;
+  font-family: 'Roboto Slab', serif;
+  color: white;
 }
 
 .form-success-submit {
