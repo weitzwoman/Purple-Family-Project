@@ -5,6 +5,7 @@ class AnswersController < ApplicationController
     @answers = Answer.where(:user_id => current_user)
     @other_answers = Answer.all
     @allowed_user_viewer = AllowedUserViewer.new
+    @allowed_user_viewers = AllowedUserViewer.where(:user_id => current_user)
   end
 
   def show

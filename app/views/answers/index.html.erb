@@ -2,7 +2,7 @@
   <%= render "show_matches" %>
 <% else %>
   <div class="show-user-answers">
-    <h2>Show User Answers</h2>
+    <h2>Your Survey Summary:</h2>
     <% @answers.each do |a| %>
     <h4> <%= a.question.content %> </h4>
     <h5>You answered: <%= a.show_true %> </h5>
@@ -11,8 +11,8 @@
 <% end %>
 
 
-<h2>Show other known User Answers</h2>
+<h2>Find Common Ground</h2>
   <%= simple_form_for @allowed_user_viewer do |f| %>
-    <h4>Enter a Friend or Family member's email to view what you have in common: <%= f.input :user_email, label: false %></h4>
+    <h4>Enter a Friend or Family member's email to view survey comparison: <%= f.input :user_email, label: false %></h4>
     <%= f.submit "Submit Email", :class => 'btn btn-default' %>
   <% end %>

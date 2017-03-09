@@ -1,4 +1,4 @@
-<h2>Show Matches</h2>
+<h2>You and <%= @allowed_user_viewers.last.user_email %>  </h2>
 <% @questions.each do |q| %>
   <h4><%= q.content %></h4>
   <p><%= answer_match(q) %></p>

@@ -18,7 +18,7 @@
       <%= render "answer_survey_form", question: q, answer: @answer %>
     </div>
     <div id="form-success-submit-<%= q.id %>" class="form-success-submit">
-      <h4>Question Answered!</h4>
+      <h5>Question Answered!</h5>
     </div>
   <% end %>
   <h3><%= link_to "Submit Survey", form_complete_path(id: current_user.id) %> </h3>
