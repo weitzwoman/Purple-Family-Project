@@ -33,4 +33,12 @@ describe 'how admin creates question' do
     expect(page).to have_content("Health")
   end
 
+  it "deletes the question" do
+    user = create(:user, :is_admin => true)
+    question = create(:question)
+    login_as(user)
+    visit questions_path
+    click_on "Delete"
+    expect(page).to_not have_content("democracy")
+  end
 end
