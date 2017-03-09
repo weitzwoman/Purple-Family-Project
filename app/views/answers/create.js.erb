@@ -1,4 +1,4 @@
 $("#question-options-<%= @answer.question_id %>").slideUp();
 setTimeout(function() {
-  $(".form-success-submit").show();
+  $("#form-success-submit-<%= @answer.question_id %>").show();
 }, 500);

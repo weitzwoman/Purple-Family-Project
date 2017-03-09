@@ -1,4 +1,6 @@
-<h1>HOME</h1>
+<h2>Is your Thanksgiving going to be awkward this year?</h2>
+<h1>YOUR FAMILY MIGHT NEED SOME PURPLE.</h1>
 
-
-<%= link_to "View Questions, Edit Questions", questions_path %>
+<% if user_signed_in? %>
+  <%= link_to "Take the Survey", questions_path %>
+<% end %>

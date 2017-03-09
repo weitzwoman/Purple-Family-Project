@@ -11,13 +11,13 @@
   </table>
   <h4><%= link_to "Add New Question", new_question_path %></h4>
 <% elsif !current_user.form_complete %>
-  <h2>Take the Survey</h2>
+  <h2>Be Honest</h2>
   <% @questions.each do |q| %>
     <h4> <%= q.content %> </h4>
     <div id="question-options-<%= q.id %>">
       <%= render "answer_survey_form", question: q, answer: @answer %>
     </div>
-    <div class="form-success-submit">
+    <div id="form-success-submit-<%= q.id %>" class="form-success-submit">
       <h4>Question Answered!</h4>
     </div>
   <% end %>
