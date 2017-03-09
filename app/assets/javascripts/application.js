@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require cocoon
+
+$(document).on("turbolinks:load", function(){
+  $("form").on("change", "input[type=checkbox]", function(){
+    $(this).parent().parent().parent().parent("form").submit();
+  });
+});
