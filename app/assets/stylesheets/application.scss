@@ -20,6 +20,8 @@
  $lightpurple: #ce93d8;
  $gold: #ffd740;
 
+// navbar
+
 .navbar {
   background-color: transparent;
   border: transparent;
@@ -29,20 +31,35 @@
   font-family: "Crete Round", serif;
   font-size: 20px;
   color: $lightpurple;
+  &:hover {
+    color: $darkpurple;
+  }
 }
 
 .navbar .container-fluid .nav li a {
   font-size: 18px;
   font-family: 'Roboto Slab', serif;
-  color: white;
+  color: #e0e0e0;
   &:hover {
     color: $gold;
   }
 }
 
-.form-success-submit {
-  display: none;
+// flash messages
+
+.notice {
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
+  color: $lightpurple;
 }
+
+.alert {
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
+  color: $gold;
+}
+
+// home page
 
 .home-text-question {
   text-align: center;
@@ -55,17 +72,19 @@
   text-align: center;
   color: white;
   font-size: 50px;
+  margin-bottom: 50px;
 }
 
 .home-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 50px;
+  margin-bottom: 50px;
   h4 {
     background-color: $lightpurple;
     padding: 20px;
     border: 2px solid $lightpurple;
+    border-radius: 5px;
     display: inline-block;
     a {
       color: white;
@@ -91,18 +110,14 @@
   z-index: -1;
 }
 
+// questions index
+
+.form-success-submit {
+  display: none;
+}
+
 .survey-taken {
   text-align: center;
 }
 
-.notice {
-  font-size: 20px;
-  font-family: 'Roboto Slab', serif;
-  color: $lightpurple;
-}
-
-.alert {
-  font-size: 20px;
-  font-family: 'Roboto Slab', serif;
-  color: $gold;
-}
+// answers index

@@ -1,34 +1,36 @@
-<% if current_user.is_admin? %>
-  <h1>Admin View</h1>
-  <table>
-    <% @questions.each do |question| %>
-      <tr>
-        <td><%= question.content %></td>
-        <td><%= link_to "Edit", edit_question_path(question) %></td>
-        <td><%= link_to "Delete", question, :confirm => 'Are you sure?', :method => :delete %></td>
-      </tr>
+<div class="survey-background">  
+  <% if current_user.is_admin? %>
+    <h1>Admin View</h1>
+    <table>
+      <% @questions.each do |question| %>
+        <tr>
+          <td><%= question.content %></td>
+          <td><%= link_to "Edit", edit_question_path(question) %></td>
+          <td><%= link_to "Delete", question, :confirm => 'Are you sure?', :method => :delete %></td>
+        </tr>
+      <% end %>
+    </table>
+    <h4><%= link_to "Add New Question", new_question_path %></h4>
+  <% elsif !current_user.form_complete %>
+    <h2>Be Honest</h2>
+    <% @questions.each do |q| %>
+      <h4> <%= q.content %> </h4>
+      <div id="question-options-<%= q.id %>">
+        <%= render "answer_survey_form", question: q, answer: @answer %>
+      </div>
+      <div id="form-success-submit-<%= q.id %>" class="form-success-submit">
+        <h5>Question Answered!</h5>
+      </div>
     <% end %>
-  </table>
-  <h4><%= link_to "Add New Question", new_question_path %></h4>
-<% elsif !current_user.form_complete %>
-  <h2>Be Honest</h2>
-  <% @questions.each do |q| %>
-    <h4> <%= q.content %> </h4>
-    <div id="question-options-<%= q.id %>">
-      <%= render "answer_survey_form", question: q, answer: @answer %>
+    <div class="home-button">
+      <h4><%= link_to "SUBMIT SURVEY", form_complete_path(id: current_user.id) %> </h4>
     </div>
-    <div id="form-success-submit-<%= q.id %>" class="form-success-submit">
-      <h5>Question Answered!</h5>
+  <% else %>
+    <div class="survey-taken">
+      <h3>You've already taken the survey!</h3>
+    </div>
+    <div class="home-button">
+      <h4><%= link_to "GO TO SURVEY SUMMARY", user_answers_path(current_user) %></h4>
     </div>
   <% end %>
-  <div class="home-button">
-    <h4><%= link_to "SUBMIT SURVEY", form_complete_path(id: current_user.id) %> </h4>
-  </div>
-<% else %>
-  <div class="survey-taken">
-    <h3>You've already taken the survey!</h3>
-  </div>
-  <div class="home-button">
-    <h4><%= link_to "GO TO SURVEY SUMMARY", user_answers_path(current_user) %></h4>
-  </div>
-<% end %>
+</div>
