@@ -23,7 +23,14 @@
   display: none;
 }
 
-.home-text {
+.home-text-question {
+  text-align: center;
+  color: white;
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+}
+
+.home-text-purple {
   text-align: center;
   color: white;
 }
@@ -61,6 +68,8 @@
   background-repeat: no-repeat;
   z-index: -1;
 }
+
+
 
 .survey-taken {
   text-align: center;
