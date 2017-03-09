@@ -16,6 +16,10 @@
 
 #### 5. (To do) Users can send emails to friends or family they'd like to invite to take the survey.
 
+#### 6. (To do) Users without profiles can view About page.
+
+#### 7. (To do) Users can view Next Steps section on political communication on Answers index when survey comparison is shown.
+
 ## Setup/Installation Requirements
 
 * _In the Command Line, run:_
@@ -39,6 +43,8 @@ localhost:3000
 ## Known Bugs
 
 #### 1. Survey Questions currently not seeded to database.
+#### 2. Validations needed for form_complete, so Users can't submit survey without answering all questions.
+#### 3. Alert message needed if other user email is entered when that other user hasn't completed the survey.
 
 ## Support and contact details
 
