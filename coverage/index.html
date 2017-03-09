@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-09T10:43:15-08:00">2017-03-09T10:43:15-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-09T11:33:57-08:00">2017-03-09T11:33:57-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.67%</span></span>
+    (<span class="covered_percent"><span class="green">95.01%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.09
+         1.1
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>42</b> files in total.
-    <b>375</b> relevant lines. 
-    <span class="green"><b>355</b> lines covered</span> and
-    <span class="red"><b>20</b> lines missed </span>
+    <b>381</b> relevant lines. 
+    <span class="green"><b>362</b> lines covered</span> and
+    <span class="red"><b>19</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#4c653122a6003b26b0804f39fc67a69097be3313" class="src_link" title="app/controllers/questions_controller.rb">app/controllers/questions_controller.rb</a></td>
-        <td class="green strong">90.91 %</td>
+        <td class="green strong">93.94 %</td>
         <td>58</td>
         <td>33</td>
-        <td>30</td>
-        <td>3</td>
-        <td>1.3</td>
+        <td>31</td>
+        <td>2</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -393,9 +393,9 @@
       <tr>
         <td class="strong"><a href="#6e2215c375282965766b4f70f0879929a2270eb3" class="src_link" title="spec/features/add_questions_pages_spec.rb">spec/features/add_questions_pages_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>44</td>
-        <td>35</td>
-        <td>35</td>
+        <td>52</td>
+        <td>41</td>
+        <td>41</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -457,7 +457,7 @@
         <td>23</td>
         <td>23</td>
         <td>0</td>
-        <td>2.1</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -693,11 +693,11 @@
         <div class="source_table" id="4c653122a6003b26b0804f39fc67a69097be3313">
   <div class="header">
     <h3>app/controllers/questions_controller.rb</h3>
-    <h4><span class="green">90.91 %</span> covered</h4>
+    <h4><span class="green">93.94 %</span> covered</h4>
     <div>
       <b>33</b> relevant lines. 
-      <span class="green"><b>30</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <span class="green"><b>31</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -758,8 +758,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">    @question = Question.find(params[:id])</code>
         </li>
@@ -7013,8 +7013,8 @@
     <h3>spec/features/add_questions_pages_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>35</b> relevant lines. 
-      <span class="green"><b>35</b> lines covered</span> and
+      <b>41</b> relevant lines. 
+      <span class="green"><b>41</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -7235,7 +7235,7 @@
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &quot;deletes the question&quot; do</code>
+          <code class="ruby">  it &quot;shows question on show page for additional editing options&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="37">
@@ -7259,28 +7259,76 @@
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit questions_path</code>
+          <code class="ruby">    visit question_path(question)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_on &quot;Delete&quot;</code>
+          <code class="ruby">    expect(page).to have_content(&quot;democracy&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(page).to_not have_content(&quot;democracy&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;deletes the question&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = create(:user, :is_admin =&gt; true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    question = create(:question)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    login_as(user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit questions_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &quot;Delete&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to_not have_content(&quot;democracy&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">end</code>
@@ -7880,14 +7928,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="48">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="48">
+          <span class="hits">15</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="49">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="49">
+          <span class="hits">15</span>
           
           <code class="ruby">      example.run</code>
         </li>

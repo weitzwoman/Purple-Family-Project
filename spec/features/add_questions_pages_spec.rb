@@ -33,6 +33,14 @@ describe 'how admin creates question' do
     expect(page).to have_content("Health")
   end
 
+  it "shows question on show page for additional editing options" do
+    user = create(:user, :is_admin => true)
+    question = create(:question)
+    login_as(user)
+    visit question_path(question)
+    expect(page).to have_content("democracy")
+  end
+
   it "deletes the question" do
     user = create(:user, :is_admin => true)
     question = create(:question)
