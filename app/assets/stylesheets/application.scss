@@ -28,18 +28,21 @@
 }
 
 .home-button {
-  display: inline-block;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   background-color: transparent;
-  border: 2px solid $lightpurple;
   h4 {
-    // text-align: center; not working
-    // color: $lightpurple; not working
-    a:hover {
-      text-decoration: none;
-      color: $darkpurple;
+    padding: 20px;
+    margin-top: 15px;
+    border: 2px solid $lightpurple;
+    display: inline-block;
+    a {
+      color: $lightpurple;
+      &:hover {
+        text-decoration: none;
+        color: $darkpurple;
+      }
     }
   }
 }

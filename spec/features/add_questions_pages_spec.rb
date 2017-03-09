@@ -15,4 +15,12 @@ describe 'how admin creates question' do
     expect(page).to have_content("neighbors")
   end
 
+  it "shows errors if question form not filled out" do
+    user = create(:user, :is_admin => true)
+    login_as(user)
+    visit new_question_path
+    click_on "Submit Question"
+    expect(page).to have_content("errors")
+  end
+
 end

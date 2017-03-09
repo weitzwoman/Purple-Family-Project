@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-09T09:54:10-08:00">2017-03-09T09:54:10-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-09T09:57:29-08:00">2017-03-09T09:57:29-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.24%</span></span>
+    (<span class="covered_percent"><span class="green">91.67%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.01
+         1.04
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>42</b> files in total.
-    <b>354</b> relevant lines. 
-    <span class="green"><b>323</b> lines covered</span> and
-    <span class="red"><b>31</b> lines missed </span>
+    <b>360</b> relevant lines. 
+    <span class="green"><b>330</b> lines covered</span> and
+    <span class="red"><b>30</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#4c653122a6003b26b0804f39fc67a69097be3313" class="src_link" title="app/controllers/questions_controller.rb">app/controllers/questions_controller.rb</a></td>
-        <td class="red strong">57.58 %</td>
+        <td class="red strong">60.61 %</td>
         <td>58</td>
         <td>33</td>
-        <td>19</td>
-        <td>14</td>
-        <td>0.6</td>
+        <td>20</td>
+        <td>13</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -393,9 +393,9 @@
       <tr>
         <td class="strong"><a href="#6e2215c375282965766b4f70f0879929a2270eb3" class="src_link" title="spec/features/add_questions_pages_spec.rb">spec/features/add_questions_pages_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>18</td>
-        <td>14</td>
-        <td>14</td>
+        <td>26</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -457,7 +457,7 @@
         <td>23</td>
         <td>23</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -693,11 +693,11 @@
         <div class="source_table" id="4c653122a6003b26b0804f39fc67a69097be3313">
   <div class="header">
     <h3>app/controllers/questions_controller.rb</h3>
-    <h4><span class="red">57.58 %</span> covered</h4>
+    <h4><span class="red">60.61 %</span> covered</h4>
     <div>
       <b>33</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
-      <span class="red"><b>14</b> lines missed.</span>
+      <span class="green"><b>20</b> lines covered</span> and
+      <span class="red"><b>13</b> lines missed.</span>
     </div>
   </div>
   
@@ -782,14 +782,14 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
           
           <code class="ruby">    @question = Question.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
           
           <code class="ruby">    @question.answers.build</code>
         </li>
@@ -812,14 +812,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
           <code class="ruby">    @question = Question.new(question_params)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
           <code class="ruby">    if @question.save</code>
         </li>
@@ -842,8 +842,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="24">
-          
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
           <code class="ruby">      render :new</code>
         </li>
@@ -1022,8 +1022,8 @@
           <code class="ruby">  def question_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="54">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="54">
+          <span class="hits">2</span>
           
           <code class="ruby">    params.require(:question).permit(:content,</code>
         </li>
@@ -7013,8 +7013,8 @@
     <h3>spec/features/add_questions_pages_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -7124,7 +7124,55 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;shows errors if question form not filled out&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = create(:user, :is_admin =&gt; true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    login_as(user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit new_question_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &quot;Submit Question&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content(&quot;errors&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
@@ -7724,14 +7772,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="48">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="48">
+          <span class="hits">12</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="49">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="49">
+          <span class="hits">12</span>
           
           <code class="ruby">      example.run</code>
         </li>
