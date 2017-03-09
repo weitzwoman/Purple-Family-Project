@@ -1,8 +1,8 @@
 <div class="survey-answer-form">
   <%= simple_form_for [question, answer], remote: true do |f| %>
-    <%= f.input :response1, inline_label: "I agree", label: false %>
-    <%= f.input :response2, inline_label: "I disagree", label: false %>
-    <%= f.input :response3, inline_label: "I'm not sure", label: false %>
+    <%= f.input :response1, inline_label: "I agree", label: false, :class => 'btn btn-default' %>
+    <%= f.input :response2, inline_label: "I disagree", label: false, :class => 'btn btn-default' %>
+    <%= f.input :response3, inline_label: "I'm not sure", label: false, :class => 'btn btn-default' %>
     <%= f.submit "Submit Answer" %>
   <% end %>
 </div>

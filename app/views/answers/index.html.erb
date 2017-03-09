@@ -2,10 +2,11 @@
   <%= render "show_matches" %>
 <% else %>
   <div class="show-user-answers">
-    <h2>Your Survey Summary:</h2>
+    <h2>Your Survey Summary</h2>
+    <!-- this loop isn't working right... weird -->
     <% @answers.each do |a| %>
-    <h4> <%= a.question.content %> </h4>
-    <h5>You answered: <%= a.show_true %> </h5>
+      <h4> <%= a.question.content %> </h4>
+      <h5>You answered: <%= a.show_true %> </h5>
     <% end %>
   </div>
 <% end %>
