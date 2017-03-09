@@ -14,7 +14,7 @@
         <div class="navbar-header">
           <%= link_to 'Purple Family Project', root_path, :class => 'navbar-brand' %>
         </div>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-right">
           <% if !user_signed_in? %>
             <li><%= link_to 'Sign Up', new_user_registration_path %></li>
             <li><%= link_to 'Log In', new_user_session_path %></li>

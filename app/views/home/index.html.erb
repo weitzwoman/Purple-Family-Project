@@ -1,6 +1,8 @@
-<h2>Is your Thanksgiving going to be awkward this year?</h2>
-<h1>YOUR FAMILY MIGHT NEED SOME PURPLE.</h1>
-
+<h2 class="home-text">Is your Thanksgiving going to be awkward this year?</h2>
+<h1 class="home-text">YOUR FAMILY MIGHT NEED SOME PURPLE.</h1>
+<br>
 <% if user_signed_in? %>
-  <%= link_to "Take the Survey", questions_path %>
+  <div class="home-button">
+    <h4><%= link_to "TAKE THE SURVEY", questions_path %></h4>
+  </div>
 <% end %>

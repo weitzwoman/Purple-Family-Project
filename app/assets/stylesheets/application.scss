@@ -16,6 +16,28 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ $darkpurple: #6a1b9a;
+ $lightpurple: #ce93d8;
+
 .form-success-submit {
   display: none;
+}
+
+.home-text {
+  text-align: center;
+}
+
+.home-button {
+  display: inline-block;
+  // text-align: center; not working?
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: 2px solid $lightpurple;
+  // color: $lightpurple !important; not working either
+  margin-top: 15px;
+  a:hover {
+    text-decoration: none;
+    color: $darkpurple;
+  }
 }

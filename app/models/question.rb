@@ -4,4 +4,5 @@ class Question < ActiveRecord::Base
 
   accepts_nested_attributes_for :answers, reject_if: :all_blank, allow_destroy: true
 
+  validates :content, :presence => true
 end
