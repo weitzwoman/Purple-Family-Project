@@ -18,6 +18,7 @@
 
  $darkpurple: #6a1b9a;
  $lightpurple: #ce93d8;
+ $gold: #ffd740;
 
 .navbar {
   background-color: transparent;
@@ -34,6 +35,9 @@
   font-size: 18px;
   font-family: 'Roboto Slab', serif;
   color: white;
+  &:hover {
+    color: $gold;
+  }
 }
 
 .form-success-submit {
@@ -87,8 +91,18 @@
   z-index: -1;
 }
 
-
-
 .survey-taken {
   text-align: center;
+}
+
+.notice {
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
+  color: $lightpurple;
+}
+
+.alert {
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
+  color: $gold;
 }
