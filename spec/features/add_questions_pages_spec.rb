@@ -20,7 +20,7 @@ describe 'how admin creates question' do
     login_as(user)
     visit new_question_path
     click_on "Submit Question"
-    expect(page).to have_content("errors")
+    expect(page).to have_content("blank")
   end
 
 end

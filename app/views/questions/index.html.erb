@@ -25,7 +25,9 @@
     <h4><%= link_to "SUBMIT SURVEY", form_complete_path(id: current_user.id) %> </h4>
   </div>
 <% else %>
-  <h3>You've already taken the survey!</h3>
+  <div class="survey-taken">
+    <h3>You've already taken the survey!</h3>
+  </div>
   <div class="home-button">
     <h4><%= link_to "GO TO SURVEY SUMMARY", user_answers_path(current_user) %></h4>
   </div>
