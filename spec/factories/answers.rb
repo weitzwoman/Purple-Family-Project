@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :answer do
-    response1
+    response1 true
     response2
     response3
     user

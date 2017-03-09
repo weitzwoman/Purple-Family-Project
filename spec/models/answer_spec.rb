@@ -6,6 +6,8 @@ describe Answer do
 
   # describe '#show_true' do
   #   it 'replaces boolean value with statement if user chooses answer' do
+  #     user = create(:user)
+  #     question = create(:question)
   #
   #   end
   # end

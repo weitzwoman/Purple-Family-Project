@@ -1,11 +1,27 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/TracieTop2/Desktop/purple-family/spec/models/allowed_user_viewer_spec.rb": [
+      "/Users/TracieTop2/Desktop/purple-family/spec/features/add_allowed_user_viewer_pages_spec.rb": [
+
+      ],
+      "/Users/TracieTop2/Desktop/purple-family/spec/features/add_questions_pages_spec.rb": [
         1,
         null,
         1,
-        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/TracieTop2/Desktop/purple-family/spec/rails_helper.rb": [
@@ -56,8 +72,8 @@
         null,
         null,
         1,
-        10,
-        10,
+        11,
+        11,
         null,
         null,
         null,
@@ -942,16 +958,38 @@
         null,
         null
       ],
+      "/Users/TracieTop2/Desktop/purple-family/spec/factories/allowed_user_viewers.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/TracieTop2/Desktop/purple-family/spec/factories/answers.rb": [
-
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
       ],
       "/Users/TracieTop2/Desktop/purple-family/spec/factories/questions.rb": [
-
+        1,
+        1,
+        1,
+        null,
+        null
       ],
       "/Users/TracieTop2/Desktop/purple-family/spec/factories/users.rb": [
         1,
         1,
-        null,
+        1,
+        1,
         null,
         null
       ],
@@ -1000,6 +1038,16 @@
         1,
         null
       ],
+      "/Users/TracieTop2/Desktop/purple-family/spec/features/edit_answers_pages_spec.rb": [
+
+      ],
+      "/Users/TracieTop2/Desktop/purple-family/spec/models/allowed_user_viewer_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null
+      ],
       "/Users/TracieTop2/Desktop/purple-family/app/models/allowed_user_viewer.rb": [
         1,
         1,
@@ -1012,6 +1060,8 @@
         1,
         2,
         2,
+        null,
+        null,
         null,
         null,
         null,
@@ -1064,8 +1114,100 @@
         2,
         2,
         null
+      ],
+      "/Users/TracieTop2/Desktop/purple-family/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/TracieTop2/Desktop/purple-family/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/TracieTop2/Desktop/purple-family/app/controllers/questions_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1489079530
+    "timestamp": 1489082050
   }
 }
