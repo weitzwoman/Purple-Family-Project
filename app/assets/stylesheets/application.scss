@@ -19,6 +19,28 @@
  $darkpurple: #6a1b9a;
  $lightpurple: #ce93d8;
 
+.navbar {
+  background-color: transparent;
+  border: transparent;
+}
+
+.navbar-header {
+  .navbar-brand {
+    font-family: "Crete Round", serif;
+    font-size: 20px;
+    a {
+      color: $lightpurple;
+    }
+  }
+}
+
+.navbar-right {
+  font-size: 20px;
+  a, li {
+    color: white;
+  }
+}
+
 .form-success-submit {
   display: none;
 }
@@ -33,6 +55,7 @@
 .home-text-purple {
   text-align: center;
   color: white;
+  font-size: 50px;
 }
 
 .home-button {
