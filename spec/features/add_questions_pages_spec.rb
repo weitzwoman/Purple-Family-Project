@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'how admin creates question' do
-  it 'creates question' do
+  it "creates question" do
     user = create(:user, :is_admin => true)
     visit "/"
     click_on "Log In"
@@ -21,6 +21,16 @@ describe 'how admin creates question' do
     visit new_question_path
     click_on "Submit Question"
     expect(page).to have_content("blank")
+  end
+
+  it "edits the question" do
+    user = create(:user, :is_admin => true)
+    question = create(:question)
+    login_as(user)
+    visit edit_question_path(question)
+    fill_in "Content", :with => "Health care is a human right"
+    click_on "Submit Question"
+    expect(page).to have_content("Health")
   end
 
 end
