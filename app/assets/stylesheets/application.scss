@@ -25,26 +25,41 @@
 
 .home-text {
   text-align: center;
+  color: white;
 }
 
 .home-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: transparent;
+  margin-top: 50px;
   h4 {
+    background-color: $lightpurple;
     padding: 20px;
-    margin-top: 15px;
     border: 2px solid $lightpurple;
     display: inline-block;
     a {
-      color: $lightpurple;
+      color: white;
+      transition: .25s;
       &:hover {
         text-decoration: none;
         color: $darkpurple;
       }
     }
   }
+}
+
+.home-image {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-image: asset-url("bench.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .survey-taken {
