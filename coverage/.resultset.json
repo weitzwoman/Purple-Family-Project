@@ -1,11 +1,10 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/TracieTop2/Desktop/purple-family/spec/models/answer_spec.rb": [
+      "/Users/TracieTop2/Desktop/purple-family/spec/models/allowed_user_viewer_spec.rb": [
         1,
         null,
         1,
-        2,
         2,
         null
       ],
@@ -57,8 +56,8 @@
         null,
         null,
         1,
-        7,
-        7,
+        10,
+        10,
         null,
         null,
         null,
@@ -117,6 +116,7 @@
         null,
         1,
         null,
+        1,
         1,
         1,
         null,
@@ -942,6 +942,12 @@
         null,
         null
       ],
+      "/Users/TracieTop2/Desktop/purple-family/spec/factories/answers.rb": [
+
+      ],
+      "/Users/TracieTop2/Desktop/purple-family/spec/factories/questions.rb": [
+
+      ],
       "/Users/TracieTop2/Desktop/purple-family/spec/factories/users.rb": [
         1,
         1,
@@ -964,6 +970,8 @@
         1,
         null,
         null,
+        1,
+        1,
         null
       ],
       "/Users/TracieTop2/Desktop/purple-family/app/models/user.rb": [
@@ -992,6 +1000,26 @@
         1,
         null
       ],
+      "/Users/TracieTop2/Desktop/purple-family/app/models/allowed_user_viewer.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/TracieTop2/Desktop/purple-family/spec/models/answer_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/TracieTop2/Desktop/purple-family/app/models/answer.rb": [
         1,
         1,
@@ -1015,6 +1043,7 @@
         2,
         2,
         2,
+        2,
         null
       ],
       "/Users/TracieTop2/Desktop/purple-family/app/models/question.rb": [
@@ -1024,10 +1053,7 @@
         null,
         1,
         null,
-        null,
-        null,
-        null,
-        null,
+        1,
         null
       ],
       "/Users/TracieTop2/Desktop/purple-family/spec/models/user_spec.rb": [
@@ -1036,9 +1062,10 @@
         1,
         2,
         2,
+        2,
         null
       ]
     },
-    "timestamp": 1488997755
+    "timestamp": 1489079530
   }
 }
