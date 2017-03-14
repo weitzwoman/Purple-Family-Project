@@ -42,9 +42,8 @@ localhost:3000
 
 ## Known Bugs
 
-#### 1. Survey Questions currently not seeded to database.
-#### 2. Validations needed for form_complete, so Users can't submit survey without answering all questions.
-#### 3. Alert message needed if other user email is entered when that other user hasn't completed the survey.
+#### 1. Validations needed for form_complete, so Users can't submit survey without answering all questions.
+#### 2. Alert message needed if other user email is entered when that other user hasn't completed the survey.
 
 ## Support and contact details
 
