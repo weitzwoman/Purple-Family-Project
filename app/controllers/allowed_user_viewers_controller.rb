@@ -6,10 +6,11 @@ class AllowedUserViewersController < ApplicationController
   def create
     @allowed_user_viewer = AllowedUserViewer.new(viewer_params)
     @allowed_user_viewer.user_id = current_user.id
-    if @allowed_user_viewer.save
+    if User.where(email: viewer_params[:user_email]).length > 0
       redirect_to user_answers_path(current_user)
     else
-      flash[:alert] = "That user has not taken a survey"
+      flash[:alert] = "That user has not taken a survey, but we'll send them an invite"
+      UserMailer.welcome_email(@allowed_user_viewer).deliver_now
       redirect_to :back
     end
   end

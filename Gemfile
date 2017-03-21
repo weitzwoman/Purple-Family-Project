@@ -41,7 +41,6 @@ gem 'simple_form'
 gem 'cocoon'
 gem 'rails_admin', '~> 1.1.1'
 gem 'cancancan'
-gem 'letter_opener'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -58,6 +57,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'vcr'
   gem 'webmock'
+  gem 'letter_opener'
 end
 
 group :development do
