@@ -9,7 +9,7 @@ class AnswersController < ApplicationController
     @users = []
     @allowed_user_viewers.each do |auv|
       @user = User.where(email: auv.user_email)
-      binding.pry
+      # binding.pry
       if @user.length > 0
         user = @user[0]
         @users.push(user)

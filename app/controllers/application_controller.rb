@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     cua = current_user.answers.where(question_id: question.id)
     # otheru = User.where(email: current_user.allowed_user_viewers.last.user_email)
     otheru = last_compare
-    othera = otheru.first.answers.where(question_id: question.id)
+    othera = otheru.answers.where(question_id: question.id)
     if (cua.first.response1 == true) && (othera.first.response1 == true)
       "We both agree"
     elsif (cua.first.response2 == true) && (othera.first.response2 == true)
