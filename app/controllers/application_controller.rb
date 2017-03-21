@@ -3,9 +3,10 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
 
-  def answer_match(question)
+  def answer_match(question, last_compare)
     cua = current_user.answers.where(question_id: question.id)
-    otheru = User.where(email: current_user.allowed_user_viewers.last.user_email)
+    # otheru = User.where(email: current_user.allowed_user_viewers.last.user_email)
+    otheru = last_compare
     othera = otheru.first.answers.where(question_id: question.id)
     if (cua.first.response1 == true) && (othera.first.response1 == true)
       "We both agree"

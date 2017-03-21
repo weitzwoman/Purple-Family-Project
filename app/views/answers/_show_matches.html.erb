@@ -1,1 +1,5 @@
-
+<h2>Your Results with <%= @last_compare.email %></h2>
+<% @questions.each do |q| %>
+  <h4><%= q.content %></h4>
+  <p><%= answer_match(q, @last_compare) %></p>
+<% end %>

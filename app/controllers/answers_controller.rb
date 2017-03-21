@@ -6,6 +6,17 @@ class AnswersController < ApplicationController
     @other_answers = Answer.all
     @allowed_user_viewer = AllowedUserViewer.new
     @allowed_user_viewers = AllowedUserViewer.where(:user_id => current_user)
+    @users = []
+    @allowed_user_viewers.each do |auv|
+      @user = User.where(email: auv.user_email)
+      binding.pry
+      if @user.length > 0
+        user = @user[0]
+        @users.push(user)
+      end
+    end
+    @last_compare_user = @users.select { |user| user.form_complete == true }
+    @last_compare = @last_compare_user.last
   end
 
   def show
