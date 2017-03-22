@@ -1092,6 +1092,30 @@
         null,
         null
       ],
+      "/Users/TracieTop2/Desktop/purple-family/spec/mailers/user_mailer_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/TracieTop2/Desktop/purple-family/app/mailers/user_mailer.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/TracieTop2/Desktop/purple-family/app/mailers/application_mailer.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/TracieTop2/Desktop/purple-family/spec/models/allowed_user_viewer_spec.rb": [
         1,
         null,
@@ -1111,6 +1135,8 @@
         1,
         2,
         2,
+        null,
+        null,
         null,
         null,
         null,
@@ -1182,6 +1208,7 @@
         null,
         1,
         0,
+        null,
         0,
         0,
         0,
@@ -1269,7 +1296,10 @@
         0,
         0,
         0,
+        0,
         null,
+        0,
+        0,
         0,
         0,
         null,
@@ -1297,6 +1327,16 @@
         1,
         1,
         1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         1,
@@ -1321,6 +1361,6 @@
         null
       ]
     },
-    "timestamp": 1489098198
+    "timestamp": 1490217301
   }
 }

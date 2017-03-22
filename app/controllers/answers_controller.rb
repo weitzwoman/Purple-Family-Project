@@ -9,7 +9,6 @@ class AnswersController < ApplicationController
     @users = []
     @allowed_user_viewers.each do |auv|
       @user = User.where(email: auv.user_email)
-      # binding.pry
       if @user.length > 0
         user = @user[0]
         @users.push(user)
@@ -36,6 +35,6 @@ class AnswersController < ApplicationController
 
 private
   def answer_params
-    params.require(:answer).permit(:id, :response1, :response2, :response3, :response4, :question_id)
+    params.require(:answer).permit(:id, :response1, :response2, :response3, :question_id)
   end
 end
