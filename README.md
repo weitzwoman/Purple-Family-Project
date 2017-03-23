@@ -1,6 +1,6 @@
 # _Purple Family Project_
 
-#### _Purple Family Project is a dynamic survey to compare user to user answers, spurring ideas of common ground for political beliefs. Designed by Tracie Weitzman with inspiration from Stephanie Keske. Project written for Epicodus Capstone Independent Project 3/9/2017_
+#### _Purple Family Project is a dynamic survey to compare user to user answers, spurring ideas of common ground for political beliefs. Designed by Tracie Weitzman with inspiration from Stephanie Keske. Some survey questions were borrowed from Pew Research Center. Project written for Epicodus Capstone Independent Project 3/9/2017_
 
 #### By _**Tracie Weitzman**_
 
@@ -10,7 +10,7 @@
 
 #### 2. Users can take a survey about their political and civic beliefs.
 
-#### 3. Users can enter other User email addresses they'd like to compare survey results with. If both Users have entered each other's email addresses, survey comparison will show on application.
+#### 3. Users can enter other User email addresses they'd like to compare survey results with. 
 
 #### 4. Users with admin privileges can add, edit, and delete survey questions.
 

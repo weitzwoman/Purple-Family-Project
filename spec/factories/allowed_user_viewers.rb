@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :allowed_user_viewer do
     user_email "family@family.com"
-    user_id 1
+    user_id 
   end
 end
